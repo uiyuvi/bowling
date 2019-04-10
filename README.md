@@ -1,5 +1,7 @@
-Rules of Bowling:
-=================
+# Bowling
+Bowling game constructed using TDD approach.
+
+## Rules of Bowling:
 A game of bowling consists of ten frames. In each frame, the bowler will have two chances to knock down as many pins as possible with their bowling ball.
  
 If a bowler is able to knock down all ten pins with their first ball, he is awarded a strike.
@@ -12,9 +14,23 @@ If the bowler knocks down all 10 pins in the tenth frame, the bowler is allowed 
 
 Referred from: http://slocums.homestead.com/gamescore.html
 
+## Getting started:
+Inside this project, you can run some built-in commands:
 
-Code Commiting Guidelines:
-================================================
+### `npm start`
+
+Runs the app in development mode.<br>
+Open [http://localhost:9000](http://localhost:9000) to view it in the browser.
+
+### `npm test`
+
+Runs the test.
+
+### `npm run build`
+
+Builds the app for production to the `dist` folder in production mode
+
+## Code Commiting Guidelines:
 Inspired from Udacity - https://udacity.github.io/git-styleguide/ 
 1.       chore: updating build tasks, package manager configs, initial commit, etc.. no production code change
 2.       docs: changes to documentation (Readme file)
