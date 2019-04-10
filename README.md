@@ -31,7 +31,7 @@ Runs the test.
 Builds the app for production to the `dist` folder in production mode
 
 ## Code Commiting Guidelines:
-Inspired from Udacity - https://udacity.github.io/git-styleguide/ 
+Inspired from [https://udacity.github.io/git-styleguide/](Udacity) 
 1.       chore: updating build tasks, package manager configs, initial commit, etc.. no production code change
 2.       docs: changes to documentation (Readme file)
 3.       feat: a new feature with test case
