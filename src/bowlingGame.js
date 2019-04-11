@@ -8,7 +8,11 @@ var BowlingGame = function(){
     this.score = function(){
         var roll = 0;
         for (let frame = 0; frame < 10; frame++){
-            score += frameScore(rolls, roll);
+            if(frameScore(rolls, roll) == 10){
+                score += 10 + nextRollScore(rolls, roll)
+            } else {
+                score += frameScore(rolls, roll);
+            }
             roll += 2;
         }
         return score;
@@ -16,6 +20,10 @@ var BowlingGame = function(){
 }
 
 module.exports = BowlingGame;
+
+function nextRollScore(rolls, roll) {
+    return rolls[roll + 2];
+}
 
 function frameScore(rolls, roll) {
     return rolls[roll] + rolls[roll + 1];

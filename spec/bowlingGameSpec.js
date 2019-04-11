@@ -23,4 +23,13 @@ describe('Bowling Game', function(){
 
         expect(game.score()).toBe(20);
     });
+
+    it('should handle spare', function(){
+        game.roll(9);
+        game.roll(1);
+        game.roll(5);
+        multipleRollWithPin(17,0);
+
+        expect(game.score()).toBe(20);
+    })
 });
