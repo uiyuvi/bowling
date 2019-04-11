@@ -1,22 +1,25 @@
 const BowlingGame = require('../src/bowlingGame');
 
 describe('Bowling Game', function(){
-    it('should handle Gutter game', function () {
-        var game = new BowlingGame();
-
-        for (let rollCount = 0;rollCount < 20; rollCount++){
-            game.roll(0);
+    var game;
+    var multipleRollWithPin = function(rollCount, pin){
+        for (let roll = 0;roll < rollCount; roll++){
+            game.roll(pin);
         }
+    }
+
+    beforeEach(function () {
+        game = new BowlingGame();
+    });
+
+    it('should handle Gutter game', function () {
+        multipleRollWithPin(20,0);
 
         expect(game.score()).toBe(0);
     });
 
     it('should return 20 for 1 in all roll',function(){
-        var game = new BowlingGame();
-
-        for (let rollCount = 0;rollCount < 20; rollCount++){
-            game.roll(1);
-        }
+        multipleRollWithPin(20,1);
 
         expect(game.score()).toBe(20);
     });
