@@ -46,6 +46,6 @@ function bonusForSpare(rolls, roll) {
 }
 
 function frameScore(rolls, roll) {
-    return rolls[roll] + rolls[roll + 1];
+    return !isStrike(rolls,roll) && rolls[roll] + rolls[roll + 1];
 }
 
