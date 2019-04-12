@@ -31,5 +31,14 @@ describe('Bowling Game', function(){
         multipleRollWithPin(17,0);
 
         expect(game.score()).toBe(20);
-    })
+    });
+
+    it('should handle strike', function () {
+        game.roll(10);
+        game.roll(1);
+        game.roll(5);
+        multipleRollWithPin(17,0);
+        
+        expect(game.score()).toBe(22);
+    });
 });
