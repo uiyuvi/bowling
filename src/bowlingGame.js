@@ -12,10 +12,10 @@ var BowlingGame = function(){
         }
 
         for (let frame = 0; frame < 10; frame++){
-            if(frameScore(rolls, roll) == 10){
+            if(isSpare(rolls, roll)){
                 score += 10 + bonusForSpare(rolls, roll)
                 roll += 2;
-            } else if(rolls[roll] == 10){
+            } else if(isStrike(rolls, roll)){
                 score += 10 + bonusForStrike(rolls,roll);
                 roll += 1;
             } else {
@@ -28,6 +28,14 @@ var BowlingGame = function(){
 }
 
 module.exports = BowlingGame;
+
+function isStrike(rolls, roll) {
+    return rolls[roll] == 10;
+}
+
+function isSpare(rolls, roll) {
+    return frameScore(rolls, roll) == 10;
+}
 
 function bonusForStrike(rolls,roll){
     return rolls[roll+1] + rolls[roll+2];
