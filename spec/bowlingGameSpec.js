@@ -41,4 +41,10 @@ describe('Bowling Game', function(){
         
         expect(game.score()).toBe(22);
     });
+
+    it('should handle perfect game', function () {
+        multipleRollWithPin(12,10);
+        
+        expect(game.score()).toBe(300);
+    });
 });
