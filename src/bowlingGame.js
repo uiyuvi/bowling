@@ -12,12 +12,12 @@ var BowlingGame = function(){
         }
 
         for (let frame = 0; frame < 10; frame++){
-            if(isSpare(rolls, roll)){
-                score += 10 + bonusForSpare(rolls, roll)
-                roll += 2;
-            } else if(isStrike(rolls, roll)){
+            if(isStrike(rolls, roll)){
                 score += 10 + bonusForStrike(rolls,roll);
                 roll += 1;
+            } else if(isSpare(rolls, roll)){
+                score += 10 + bonusForSpare(rolls, roll)
+                roll += 2;
             } else {
                 score += frameScore(rolls, roll);
                 roll += 2;
@@ -46,6 +46,6 @@ function bonusForSpare(rolls, roll) {
 }
 
 function frameScore(rolls, roll) {
-    return !isStrike(rolls,roll) && rolls[roll] + rolls[roll + 1];
+    return rolls[roll] + rolls[roll + 1];
 }
 
