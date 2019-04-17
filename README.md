@@ -1,5 +1,5 @@
 # Bowling
-Bowling game constructed using TDD approach.
+Bowling game in javascript constructed using TDD approach.
 
 ## Rules of Bowling:
 A game of bowling consists of ten frames. In each frame, the bowler will have two chances to knock down as many pins as possible with their bowling ball.
